@@ -1,11 +1,8 @@
-.btn,
-.jumbotron,
-.nav :hover {
-  border-radius: 0px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
 
 body {
   background: #343a40;
+  font-family: 'Bubblegum Sans', cursive;
 }
 
 /* footer {

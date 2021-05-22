@@ -41,7 +41,10 @@ const PaymentB = ({products, setReload = f => f, reload = undefined}) => {
                             options= {{authorization: info.clientToken}}
                             onInstance= {instance => {info.instance = instance}}
                         />
-                        <button className='btn btn-block btn-success' onClick={onPurchase}>Buy</button>
+                        <button className='btn btn-danger' onClick={onPurchase}>Make Payment</button>
+                        <br />
+                        <br />
+                        <button className='btn btn-danger' onClick={()=>{}}>Pay Later</button>
                     </div>
                 ) : (<h3>Please Login</h3>)}
             </div>
@@ -96,8 +99,11 @@ const PaymentB = ({products, setReload = f => f, reload = undefined}) => {
 
     return (
         <div>
-            <h2>Billing Amount is {getAmount()}</h2>
+        <div className="card text-white bg-dark border border-warning">
+            <h2>Make Payment for <span className='btn btn-warning rounded'>$ {getAmount()}</span></h2>
+            </div>    
             {showBrainTreeDropIn()}
+            
         </div>
     )
 }

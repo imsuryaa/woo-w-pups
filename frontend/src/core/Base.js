@@ -29,8 +29,9 @@ const Base = ({
       </div>
       <div className="container">
         <span className="text-muted">
-          <span className="text-white">Buddys Day Out</span> built with MERN
+          <span className="text-white">Woo & Pups</span> built with MERN
           Stack
+          
         </span>
       </div>
     </footer>

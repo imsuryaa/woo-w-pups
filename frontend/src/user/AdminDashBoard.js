@@ -11,11 +11,11 @@ const AdminDashBoard = () => {
         return (
             <div className='card'>
                 <h4 className='card-header bg-dark text-white'>
-                    Admin Navigation
+                    Admin Panel
                 </h4>
                 <ul className='list-group'>
                     <li className='list-group-item'>
-                        <Link to='/admin/create/category' className='nav-link text-success'>Create Categories</Link>
+                        <Link to='/admin/create/category' className='nav-link text-success'>Create Breed</Link>
                     </li>
                     <li className='list-group-item'>
                         <Link to='/admin/categories' className='nav-link text-success'>Manage Categories</Link>

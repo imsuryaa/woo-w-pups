@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { signout, isAuthenticated } from "../auth/helper";
+import headerlogo from '../assets/woowpups-logo.png'
 
 const currentTab = (history, path) => {
   if (history.location.pathName === path) {
@@ -12,9 +13,9 @@ const currentTab = (history, path) => {
 
 const Menu = ({ history }) => (
   <div>
-    <nav className="navbar navbar-expand-lg shadow p-3 mb-5 rounded" style={{backgroundColor: "#E8BD0D"}}>
+    <nav className="navbar navbar-expand-lg shadow p-3 mb-5 rounded" style={{backgroundColor: "#E8BD0D", cursor: "pointer"}}>
       <a className="navbar-brand" href="/">
-        <img src='https://freedesignfile.com/upload/2021/02/Cute-dog-logo-vector.jpg' width='50px' />
+        <img src={headerlogo} width="100px"/>
       </a>
       <button
         className="navbar-toggler bg-dark"

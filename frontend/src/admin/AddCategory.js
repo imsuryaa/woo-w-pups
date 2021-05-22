@@ -14,7 +14,7 @@ const AddCategory = () => {
 
     const goBack = () => (
         <div className='mt-5'>
-            <Link className='btn btn-sm btn-success mb-3' to='/admin/dashboard'>Admin Home</Link>
+            <Link className='btn btn-md btn-danger mb-3' to='/admin/dashboard'>Admin Home</Link>
         </div>
     )
     const handleChange = (event) => {
@@ -50,7 +50,7 @@ const AddCategory = () => {
     const myCategoryForm = () => (
         <form>
             <div className='form-group'>
-                <p className='lead'>Enter the category</p>
+                <p className='lead'>Enter the Breed Name</p>
                 <input 
                     type='text' 
                     className='form-control' 
@@ -60,7 +60,8 @@ const AddCategory = () => {
                     required 
                     placeholder='For Ex. Summer' 
                 />  
-                <button onClick={onSubmit} className='btn btn-outline-info'>Create Category</button>
+                <br />
+                <button onClick={onSubmit} className='btn btn-danger'>Create Breed</button>
             </div>
         </form>
     )
@@ -69,7 +70,7 @@ const AddCategory = () => {
         <Base 
         title='Create a category here' 
         description='add a new category for new tshirts'
-        className='container bg-info p-4'
+        className='container bg-warning p-4'
         >
             <div className='row bg-white rounded'>
                 <div className='col-md-8 offset md-2'>
