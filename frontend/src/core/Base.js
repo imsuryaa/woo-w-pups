@@ -1,5 +1,6 @@
 import React from "react";
 import Menu from "./Menu";
+import banner from './../assets/banner.png'
 
 const Base = ({
   title = "My Title",
@@ -8,6 +9,9 @@ const Base = ({
 }) => (
   <div>
     <Menu />
+    <div className='container-fluid'>
+        <img src={banner}  width="100%" style={{padding: '0px'}}/>
+    </div>
     <div className="container-fluid">
       <div className="jumbotron bg-dark text-white text-center">
         <h2 className="display-5">{title}</h2>
@@ -31,7 +35,6 @@ const Base = ({
         <span className="text-muted">
           <span className="text-white">Woo & Pups</span> built with MERN
           Stack
-          
         </span>
       </div>
     </footer>

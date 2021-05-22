@@ -13,7 +13,7 @@ const currentTab = (history, path) => {
 
 const Menu = ({ history }) => (
   <div>
-    <nav className="navbar navbar-expand-lg shadow p-3 mb-5 rounded" style={{backgroundColor: "#E8BD0D", cursor: "pointer"}}>
+    <nav className="navbar navbar-expand-lg" style={{backgroundColor: "#E8BD0D", cursor: "pointer"}}>
       <a className="navbar-brand" href="/">
         <img src={headerlogo} width="100px"/>
       </a>
