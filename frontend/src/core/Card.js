@@ -62,7 +62,11 @@ const Card = ({product, addtoCart = true, removeFromCart = false, setReload = f 
           <p className="lead font-weight-normal text-wrap">
             {cardDescription}
           </p>
-          <p className="btn btn-warning rounded  btn-sm px-4">$ {cardPrice}</p>
+          <div className="row">
+            <div className="col-md-4 offset-4">
+              <p className="btn btn-warning rounded  btn-sm px-4">$ {cardPrice} /Day</p>
+            </div>
+          </div>
           <div className="row">
             <div className="col-12">
               {showAddToCart(addtoCart)}

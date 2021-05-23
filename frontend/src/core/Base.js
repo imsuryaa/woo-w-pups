@@ -9,8 +9,8 @@ const Base = ({
 }) => (
   <div>
     <Menu />
-    <div className='container-fluid'>
-        <img src={banner}  width="100%" style={{padding: '0px'}}/>
+    <div className='container-fluid' style={{padding: "0px"}}>
+        <img src={banner}  width="100%" style={{}}/>
     </div>
     <div className="container-fluid">
       <div className="jumbotron bg-dark text-white text-center">
@@ -33,7 +33,7 @@ const Base = ({
       </div>
       <div className="container">
         <span className="text-muted">
-          <span className="text-white">Woo & Pups</span> built with MERN
+          <span className="text-white">Woo W' Pups</span> built with MERN
           Stack
         </span>
       </div>
