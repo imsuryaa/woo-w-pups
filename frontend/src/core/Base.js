@@ -10,7 +10,7 @@ const Base = ({
   <div>
     <Menu />
     <div className='container-fluid' style={{padding: "0px"}}>
-        <img src={banner}  width="100%" style={{}}/>
+        <img src={banner}  width="100%" />
     </div>
     <div className="container-fluid">
       <div className="jumbotron bg-dark text-white text-center">

@@ -13,7 +13,6 @@ router.param('orderId', getOrderById)
 
 // actuall routes
 
-
 // create routes
 router.post('/order/create/:userId', isSignedIn, isAuthenticated, pushOrderInPurchaseList, updateStock, createOrder)
 // read routes
