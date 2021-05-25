@@ -15,6 +15,12 @@ const productSchema = new mongoose.Schema(
       required: true,
       maxlength: 2000
     },
+    gender: {
+      type: String,
+      trime: true,
+      required: true,
+      maxlength: 8
+    },
     price: {
       type: Number,
       required: true,

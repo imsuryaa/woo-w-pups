@@ -10,7 +10,7 @@ const ManageCategories = () => {
   const { user, token } = isAuthenticated();
 
   const preload = () => {
-    getCategories().then(data => {
+    getCategories().then((data) => {
       if (data.error) {
         console.log(data.error);
       } else {
@@ -25,39 +25,35 @@ const ManageCategories = () => {
 
   return (
     <Base title="Welcome admin" description="Manage products here">
-      <h2 className="mb-4">All products:</h2>
-      <Link className="btn btn-info" to={`/admin/dashboard`}>
+      <h2 className="mb-4">All Breeds</h2>
+      <Link className="btn btn-danger" to={`/admin/dashboard`}>
         <span className="">Admin Home</span>
       </Link>
       <div className="row">
-        <div className="col-12">
-          <h2 className="text-center text-white my-3">Total 3 products</h2>
-          {categories.map((category, index) => {
-            return (
-              <h3 className="text-white" key={index}>
-                {category.name}
-              </h3>
-            );
-          })}
-          <div className="row text-center mb-2 ">
-            <div className="col-4">
-              <h3 className="text-white text-left">I write code</h3>
-            </div>
-            <div className="col-4">
-              <Link
-                className="btn btn-success"
-                to={`/admin/product/update/productId`}
-              >
-                <span className="">Update</span>
-              </Link>
-            </div>
-            <div className="col-4">
-              <button onClick={() => {}} className="btn btn-danger">
-                Delete
-              </button>
-            </div>
-          </div>
+        <div className="col-md-2"></div>
+        <div className="col-md-8">
+          <table className="table">
+            <thead className="thead-light">
+              <th>Breed</th>
+              <th>Actions</th>
+            </thead>
+            <tbody>
+              {categories.map((category, index) => {
+                return (
+                  <tr>
+                    <td key={index}>{category.name}</td>
+                    <td>
+                      <button onClick={() => {}} className="btn btn-danger">
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
+        <div className="col-md-2"></div>
       </div>
     </Base>
   );

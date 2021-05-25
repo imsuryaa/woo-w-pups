@@ -27,35 +27,45 @@ const Orders = () => {
     return (
         <Base title="Welcome admin" description="Manage products here">
         <h2 className="mb-4">All Orders</h2>
-        <Link className="btn btn-info" to={`/admin/dashboard`}>
+        <Link className="btn btn-danger" to={`/admin/dashboard`}>
             <span className="">Admin Home</span>
         </Link>
         <div className="row">
-            <div className="col-12">
-            <h2 className="text-center text-white my-3">Orders</h2>
-
-            {orders.map((order, index) => {
-                return (<div key={index} className="row text-center mb-2 ">
-                <div className="col-4">
-                <h3 className="text-white text-left">{order._id}</h3>
-                </div>
-                <div className="col-4">
-                <Link
-                    className="btn btn-success"
-                    to={``}
-                >
-                    <span className="">Update</span>
-                </Link>
-                </div>
-                <div className="col-4">
-                <button onClick={() => {
-                    }} className="btn btn-danger">
-                    Delete
-                </button>
-                </div>
-            </div>)
-            })}
+        <div className='col-md-2'></div>
+            <div className="col-md-8">
+            <table className='table'>
+                <thead className='thead-light'>
+                    <th>Booking ID</th>
+                    <th>Name</th>
+                    <th>Dogs Name</th>
+                    <th>Payment Status</th>
+                    <th>Booking Date & Time</th>
+                    <th>No. of Days Booked</th>
+                    <th>Deliver Status</th>
+                </thead>
+                <tbody>
+                    {orders.map((order, index) => {
+                        return (
+                            <tr>
+                                <td>{order._id}</td>
+                                <td>{order.user.name}</td>
+                                <td>{order.products[0]['name']}</td>
+                                <td>{order.status}</td>
+                                <td>{order.createdAt.substring(0,16).replace('T', ' ')}</td>
+                                <td>{order.products[0]['count']}</td>
+                                <td>
+                                    <button onClick={() => {
+                                        }} className="btn btn-danger">
+                                        Deliver
+                                    </button>
+                                </td>
+                            </tr>
+                        )
+                    })}
+                </tbody>
+            </table>
             </div>
+            <div className='col-md-2'></div>
         </div>
         </Base>
     )

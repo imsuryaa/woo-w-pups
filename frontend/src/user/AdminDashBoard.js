@@ -27,7 +27,7 @@ const AdminDashBoard = () => {
                         <Link to='/admin/products' className='nav-link text-success'>Manage Profiles</Link>
                     </li>
                     <li className='list-group-item'>
-                        <Link to='/admin/orders' className='nav-link text-success'>Manage Checkouts</Link>
+                        <Link to='/admin/orders' className='nav-link text-success'>Manage Bookings</Link>
                     </li>
                 </ul>
             </div>

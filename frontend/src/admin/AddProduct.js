@@ -10,6 +10,7 @@ const AddProduct = () => {
     const [values, setValues] = useState({
         name:'',
         description:'',
+        gender: '',
         price:'',
         stock:'',
         photo:'',
@@ -23,6 +24,7 @@ const AddProduct = () => {
     })
     const {name,
         description,
+        gender,
         price,
         stock,
         categories,
@@ -59,6 +61,7 @@ const AddProduct = () => {
                     ...values,
                     name:'',
                     description:'',
+                    gender:'',
                     price:'',
                     stock:'',
                     photo:'',
@@ -97,7 +100,7 @@ const AddProduct = () => {
           <div className="form-group">
             <input
               onChange={handleChange("name")}
-              name="photo"
+              name="name"
               className="form-control"
               placeholder="Name"
               value={name}
@@ -106,7 +109,7 @@ const AddProduct = () => {
           <div className="form-group">
             <textarea
               onChange={handleChange("description")}
-              name="photo"
+              name="description"
               className="form-control"
               placeholder="Description"
               value={description}
@@ -114,8 +117,17 @@ const AddProduct = () => {
           </div>
           <div className="form-group">
             <input
+              onChange={handleChange("gender")}
+              name="gender"
+              className="form-control"
+              placeholder="Gender: Male (or) Female"
+              value={gender}
+            />
+          </div>
+          <div className="form-group">
+            <input
               onChange={handleChange("price")}
-              type="number"
+              type="price"
               className="form-control"
               placeholder="Price"
               value={price}
@@ -127,24 +139,14 @@ const AddProduct = () => {
               className="form-control"
               placeholder="Category"
             >
-              <option>Select</option>
+              <option>Select Breed</option>
               {categories && 
                 categories.map((cate, index) => (
                  <option key={index} value={cate._id}>{cate.name}</option>   
                 ))
                 }
             </select>
-          </div>
-          <div className="form-group">
-            <input
-              onChange={handleChange("stock")}
-              type="number"
-              className="form-control"
-              placeholder="Quantity"
-              value={stock}
-            />
-          </div>
-          
+          </div>          
           <button type="submit" onClick={onSubmit} className="btn btn-danger mb-3">
             Create Product
           </button>

@@ -34,38 +34,47 @@ const ManageProducts = () => {
     }
 
     return (
-        <Base title="Welcome admin" description="Manage products here">
-        <h2 className="mb-4">All products:</h2>
-        <Link className="btn btn-info" to={`/admin/dashboard`}>
+        <Base title="Welcome admin">
+        <Link className="btn btn-danger" to={`/admin/dashboard`}>
             <span className="">Admin Home</span>
         </Link>
         <div className="row">
-            <div className="col-12">
-            <h2 className="text-center text-white my-3">Total 3 products</h2>
-
-            {products.map((product, index) => {
-                return (<div key={index} className="row text-center mb-2 ">
-                <div className="col-4">
-                <h3 className="text-white text-left">{product.name}</h3>
-                </div>
-                <div className="col-4">
-                <Link
+        
+        <div className="col-md-2"></div>
+        <div className="col-md-8">
+          <table className="table">
+            <thead className="thead-light">
+              <th>List of Dogs</th>
+              <th>Breed</th>
+              <th>Actions</th>
+            </thead>
+            <tbody>
+              {products.map((product, index) => {
+                return (
+                  <tr>
+                    <td key={index}>{product.name}</td>
+                    <td>{product.category.name}</td>
+                    <td>
+                        
+                        <Link
                     className="btn btn-success"
                     to={`/admin/product/update/${product._id}`}
                 >
                     <span className="">Update</span>
                 </Link>
-                </div>
-                <div className="col-4">
-                <button onClick={() => {
-                        deleteThisProduct(product._id)
-                    }} className="btn btn-danger">
-                    Delete
-                </button>
-                </div>
-            </div>)
-            })}
-            </div>
+                   
+                      <button onClick={() => {}} className="btn btn-danger">
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <div className="col-md-2"></div>
+      
         </div>
         </Base>
     )
