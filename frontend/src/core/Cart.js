@@ -52,7 +52,7 @@ const Cart = () => {
             <div className='col-md-2'></div>
                 <div className='col-md-4'>
                     {products.length > 0 ? loadAllProducts(products) : (
-                        <h3>Nothing in cart</h3>
+                        <h3>Nothing in Checkout</h3>
                     )}
                 </div>
                 <div className='col-md-4'>

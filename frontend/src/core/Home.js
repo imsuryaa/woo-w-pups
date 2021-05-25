@@ -30,15 +30,15 @@ export default function Home() {
         <h1 className='text-white'>Connect with these Buddy's</h1>
         <br />
             <div className='row text-center'>
-                <div className='row'>
+                
                     {products.map((product, index) => {
                         return (
-                            <div key={index} className='col-3 mb-5'>
+                            <div key={index} className='col-md-3'>
                                 <Card product={product} />
                             </div>
                         )
                     })}
-                </div>
+                
             </div>
         </Base>
     )
