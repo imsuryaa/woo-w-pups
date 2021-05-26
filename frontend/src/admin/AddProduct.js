@@ -148,7 +148,7 @@ const AddProduct = () => {
             </select>
           </div>          
           <button type="submit" onClick={onSubmit} className="btn btn-danger mb-3">
-            Create Product
+            Create Profile
           </button>
         </form>
     )

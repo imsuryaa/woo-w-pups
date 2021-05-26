@@ -63,7 +63,7 @@ const ManageProducts = () => {
                     <span className="">Update</span>
                 </Link>
                    
-                      <button onClick={() => {}} className="btn btn-danger">
+                      <button onClick={deleteThisProduct()} className="btn btn-danger">
                         Delete
                       </button>
                     </td>
