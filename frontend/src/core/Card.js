@@ -11,6 +11,7 @@ const Card = ({product, addtoCart = true, removeFromCart = false, setReload = f 
   const cardTitle = product ? product.name : 'Photo from pixels'
   const cardDescription = product ? product.description : 'Default description'
   const cardPrice = product ? product.price : 'DEFAULT'
+  const cardGender = product ? product.gender : 'DEFAULT'
 
   const addToCart = () => {
       addItemToCart(product, () => setRedirect(true))
@@ -54,7 +55,7 @@ const Card = ({product, addtoCart = true, removeFromCart = false, setReload = f 
     )
   }
     return (
-      <div className="card text-white bg-dark border border-warning">
+      <div className="card text-white bg-dark border border-warning mb-3">
         <div className="card-header">{cardTitle}</div>
         <div className="card-body">
         {getRedirect(redirect)}
@@ -63,8 +64,11 @@ const Card = ({product, addtoCart = true, removeFromCart = false, setReload = f 
             {cardDescription}
           </p>
           <div className="row">
-            <div className="col-md-4 offset-4">
+            <div className="col-md-4">
               <p className="btn btn-warning rounded  btn-sm px-4">$ {cardPrice} /Day</p>
+            </div>
+            <div className="col-md-4">
+              <p className="btn btn-warning rounded  btn-sm px-4">{cardGender}</p>
             </div>
           </div>
           <div className="row">

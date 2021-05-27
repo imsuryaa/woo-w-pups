@@ -21,7 +21,7 @@ body {
 
 .carousel .slide {
   background: #343a40  !important;
-  color: black;
+  color: whitesmoke;
   height: 100%;
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 .myCarousel {
-  background: #fafafa;
+  background: #343a40;
   margin-top: -6%;
   width: 54%;
   margin-left: auto;
@@ -40,7 +40,7 @@ body {
   padding-bottom: 8%;
   padding-left: 5%;
   padding-right: 5%;
-  border: 1px solid #ddd;
+  border: 1px solid #E8BD0D;
   height: 286px;
 }
 
@@ -51,7 +51,7 @@ body {
 }
 
 .myCarousel h3 {
-  color: #222;
+  color: whitesmoke;
   font-weight: 100;
   letter-spacing: 0.2px;
   margin-bottom: 4px;
@@ -65,14 +65,14 @@ body {
   margin-top: 0;
   padding-top: 0;
   font-weight: 500;
-  color: #787878;
+  color: whitesmoke;
   font-size: 14px;
 }
 
 .myCarousel p {
   font-weight: 100 !important;
   line-height: 29px !important;
-  color: #222;
+  color: whitesmoke;
   font-size: 15px;
   font-family: sans-serif;
   max-height: 67px;

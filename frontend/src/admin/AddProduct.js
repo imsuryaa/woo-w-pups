@@ -157,7 +157,7 @@ const AddProduct = () => {
         <Base
         title='Add a new profile'
         description='Welcome to Product creation section'
-        className='container bg-warning p-4 rounded'
+        className='container bg-warning p-4 rounded mt-5 mb-5'
         >
             <Link to='/admin/dashboard' className='btn btn-md btn-danger mb-4'>Admin Home</Link>
             <div className='row bg-dark text-white rounded'>

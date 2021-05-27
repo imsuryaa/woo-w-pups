@@ -54,7 +54,7 @@ const ServiceCard = ({service, addtoCart = true, removeFromCart = false, setRelo
     )
   }
     return (
-      <div className="card text-white bg-dark border border-warning">
+      <div className="card text-white bg-dark border border-warning mb-3">
         <div className="card-header">{cardTitle}</div>
         <div className="card-body">
         {getRedirect(redirect)}

@@ -34,12 +34,11 @@ const ManageProducts = () => {
     }
 
     return (
-        <Base title="Welcome admin">
+        <Base title="Welcome admin" className='mt-5 text-white mb-5'>
         <Link className="btn btn-danger" to={`/admin/dashboard`}>
             <span className="">Admin Home</span>
         </Link>
         <div className="row">
-        
         <div className="col-md-2"></div>
         <div className="col-md-8">
           <table className="table">
@@ -74,7 +73,6 @@ const ManageProducts = () => {
           </table>
         </div>
         <div className="col-md-2"></div>
-      
         </div>
         </Base>
     )
