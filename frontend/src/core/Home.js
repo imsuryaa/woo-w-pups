@@ -5,6 +5,7 @@ import Base from './Base'
 import Card from './Card'
 import { getProducts } from './helper/coreapicalls'
 import banner from './../assets/banner.png'
+import Testimonials from './Testimonials'
 
 export default function Home() {
     // fetching products from backend and initially it will be an empty array
@@ -42,6 +43,9 @@ export default function Home() {
                         )
                     })}
             </div>
+        <br />
+        <h1 className='text-center mt-3'>Testimonials</h1>
+        <Testimonials />
         </Base>
     )
 }
