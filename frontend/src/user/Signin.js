@@ -79,6 +79,7 @@ const Signin = () => {
 
   const signInForm = () => {
     return (
+      <div className='container-fuild'>
       <div className="row">
       <div className='col-md-2'></div>
       <div className='col-md-4'>
@@ -112,6 +113,7 @@ const Signin = () => {
           </form>
         </div>
       <div className='col-md-2'></div>
+      </div>
       </div>
     )
   }

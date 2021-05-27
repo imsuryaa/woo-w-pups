@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const { ObjectId } = mongoose.Schema;
+// const { ObjectId } = mongoose.Schema;
 
-const productSchema = new mongoose.Schema(
+const serviceSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -15,11 +15,11 @@ const productSchema = new mongoose.Schema(
       required: true,
       maxlength: 2000
     },
-    gender: {
+    address: {
       type: String,
       trime: true,
       required: true,
-      maxlength: 8
+      maxlength: 2000
     },
     price: {
       type: Number,
@@ -27,18 +27,24 @@ const productSchema = new mongoose.Schema(
       maxlength: 32,
       trim: true
     },
-    category: {
-      type: ObjectId,
-      ref: "Category",
-      required: true
+    petsowned: {
+        type: Number,
+        required: true,
+        maxlength: 32,
+        trim: true
     },
-    stock: {
-      type: Number
-    },
-    sold: {
-      type: Number,
-      default: 0
-    },
+    // category: {
+    //   type: ObjectId,
+    //   ref: "Category",
+    //   required: true
+    // },
+    // stock: {
+    //   type: Number
+    // },
+    // sold: {
+    //   type: Number,
+    //   default: 0
+    // },
     photo: {
       data: Buffer,
       contentType: String
@@ -47,4 +53,4 @@ const productSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Product", productSchema);
+module.exports = mongoose.model("Service", serviceSchema);

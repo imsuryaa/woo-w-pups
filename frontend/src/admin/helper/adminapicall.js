@@ -112,3 +112,72 @@ export const getOrders = (userId, token) => {
     })
     .catch(err => console.log(err))
 }
+
+// Services calls
+export const createaService = (userId, token, service) => {
+    return fetch(`${API}/service/create/${userId}`, {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            Authorization: `Bearer ${token}`
+        },
+        body: service
+    })
+    .then(response => {
+        return response.json()
+    })
+    .catch(err => console.log(err))
+}
+
+// get all services calls
+export const getServices = () => {
+    return fetch(`${API}/services`, {
+        method: 'GET'
+    })
+    .then(response => {
+        return response.json()
+    })
+    .catch(err => console.log(err))
+}
+
+// delete a service
+export const deleteService = (serviceId, userId, token ) => {
+    return fetch(`${API}/service/${serviceId}/${userId}`, {
+        method: 'DELETE',
+        headers: {
+            Accept: 'application/json',
+            Authorization: `Bearer ${token}`
+        }
+    })
+    .then(response => {
+        return response.json()
+    })
+    .catch(err => console.log(err))
+}
+
+// get a service
+export const getService = serviceId => {
+    return fetch(`${API}/service/${serviceId}`, {
+      method: "GET"
+    })
+      .then(response => {
+        return response.json();
+      })
+      .catch(err => console.log(err));
+  };
+
+// update a service
+export const updateService = (serviceId, userId, token, service) => {
+    return fetch(`${API}/service/${serviceId}/${userId}`, {
+        method: 'PUT',
+        headers: {
+            Accept: 'application/json',
+            Authorization: `Bearer ${token}`
+        },
+        body: service
+    })
+    .then(response => {
+        return response.json()
+    })
+    .catch(err => console.log(err))
+}

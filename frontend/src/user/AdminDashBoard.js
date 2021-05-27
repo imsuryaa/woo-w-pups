@@ -15,19 +15,22 @@ const AdminDashBoard = () => {
                 </h4>
                 <ul className='list-group'>
                     <li className='list-group-item'>
-                        <Link to='/admin/create/category' className='nav-link text-success'>Create Breed</Link>
+                        <Link to='/admin/create/category' className='nav-link text-dark'>Create Breed</Link>
                     </li>
                     <li className='list-group-item'>
-                        <Link to='/admin/categories' className='nav-link text-success'>Manage Categories</Link>
+                        <Link to='/admin/create/product' className='nav-link text-dark'>Create Profile</Link>
                     </li>
                     <li className='list-group-item'>
-                        <Link to='/admin/create/product' className='nav-link text-success'>Create Profile</Link>
+                        <Link to='/admin' className='nav-link text-dark'>Create a Pet Sitter</Link>
                     </li>
                     <li className='list-group-item'>
-                        <Link to='/admin/products' className='nav-link text-success'>Manage Profiles</Link>
+                        <Link to='/admin/categories' className='nav-link text-dark'>Manage Breeds</Link>
                     </li>
                     <li className='list-group-item'>
-                        <Link to='/admin/orders' className='nav-link text-success'>Manage Bookings</Link>
+                        <Link to='/admin/products' className='nav-link text-dark'>Manage Profiles</Link>
+                    </li>
+                    <li className='list-group-item'>
+                        <Link to='/admin/orders' className='nav-link text-dark'>Manage Bookings</Link>
                     </li>
                 </ul>
             </div>
@@ -58,7 +61,7 @@ const AdminDashBoard = () => {
         description='Manage all your products here'
         className='container p-4'
         >
-            <div className='row' style={{backgroundColor: "#E8BD0D"}}>
+            <div className='row' >
                 <div className='col-3'>
                 {adminLeftSide()}
                 </div>

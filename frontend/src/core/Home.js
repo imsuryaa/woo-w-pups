@@ -4,6 +4,7 @@ import { API } from '../backend'
 import Base from './Base'
 import Card from './Card'
 import { getProducts } from './helper/coreapicalls'
+import banner from './../assets/banner.png'
 
 export default function Home() {
     // fetching products from backend and initially it will be an empty array
@@ -19,18 +20,20 @@ export default function Home() {
             }
         })
     }
-    
 
     useEffect(() => {
         loadAllProduct()
     }, [])
     console.log('API IS', API);
     return (
-        <Base title='Home' description='Connecting with pets'>
-        <h1 className='text-white'>Connect with these Buddy's</h1>
+        <Base>
+            <div className='container-fluid' style={{padding: "0px"}}>
+                <img src={banner}  width="100%" />
+            </div>
+        <br />
+        <h1 className='text-white'>Checkout variety of pups here</h1>
         <br />
             <div className='row text-center'>
-                
                     {products.map((product, index) => {
                         return (
                             <div key={index} className='col-md-3'>
@@ -38,7 +41,6 @@ export default function Home() {
                             </div>
                         )
                     })}
-                
             </div>
         </Base>
     )

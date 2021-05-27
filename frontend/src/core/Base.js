@@ -1,20 +1,17 @@
 import React from "react";
 import Menu from "./Menu";
-import banner from './../assets/banner.png'
 
 const Base = ({
   title = "My Title",
-  className = "bg-dark text-white p-4",
+  className = "bg-dark text-white",
   children,
 }) => (
   <div>
     <Menu />
-    <div className='container-fluid' style={{padding: "0px"}}>
-        <img src={banner}  width="100%" />
-    </div>
+    
     <div className="container-fluid">
-      <div className="jumbotron bg-dark text-white text-center">
-        <h2 className="display-5">{title}</h2>
+      <div className="bg-dark text-white text-center">
+        
       </div>
       <div className={className}>{children}</div>
     </div>
