@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import '../styles.css'
-import { API } from '../backend'
 import Base from './Base'
 import Card from './Card'
 import { loadCart } from './helper/cartHelper'
@@ -48,11 +47,11 @@ const Cart = () => {
 
     return (
         <Base title='Checkout'>
-            <div className='row text-center'>
+            <div className='row text-center mt-5'>
             <div className='col-md-2'></div>
                 <div className='col-md-4'>
-                    {products.length > 0 ? loadAllProducts(products) : (
-                        <h3>Nothing in Checkout</h3>
+                    {products.length == 1 ? loadAllProducts(products) : (
+                        <h3>Your Checkout is Empty</h3>
                     )}
                 </div>
                 <div className='col-md-4'>

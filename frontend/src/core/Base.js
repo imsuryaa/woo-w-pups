@@ -8,11 +8,7 @@ const Base = ({
 }) => (
   <div>
     <Menu />
-    
     <div className="container-fluid">
-      <div className="bg-dark text-white text-center">
-        
-      </div>
       <div className={className}>{children}</div>
     </div>
     <footer className="footer position-absolute w-100 bg-dark mt-auto py-3">

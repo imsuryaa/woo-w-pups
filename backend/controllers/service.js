@@ -138,7 +138,7 @@ exports.getAllServices = (req, res) => {
     // req.query.limit(user input) will be string by default in every language
     let limit = req.query.limit ? parseInt(req.query.limit) : 8
     let sortBy = req.query.sortBy ? req.query.sortBy : '_id'
-    Product.find()
+    Service.find()
     .select('-photo')
     // .populate('category')
     .sort([[sortBy, 'asc']])

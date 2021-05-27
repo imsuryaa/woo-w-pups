@@ -21,7 +21,7 @@ const AdminDashBoard = () => {
                         <Link to='/admin/create/product' className='nav-link text-dark'>Create Profile</Link>
                     </li>
                     <li className='list-group-item'>
-                        <Link to='/admin' className='nav-link text-dark'>Create a Pet Sitter</Link>
+                        <Link to='/admin/create/service' className='nav-link text-dark'>Create a Pet Sitter</Link>
                     </li>
                     <li className='list-group-item'>
                         <Link to='/admin/categories' className='nav-link text-dark'>Manage Breeds</Link>
@@ -39,7 +39,7 @@ const AdminDashBoard = () => {
     const adminRightSide = () => {
         return(
             <div className='card mb-4'>
-                <h4 className='card-header'>Admin Information</h4>
+                <h4 className='card-header bg-dark text-white'>Admin Information</h4>
                 <ul className='list-group'>
                     <li className='list-group-item'>
                         <span className='badge bg-success mr-2'>Name: </span> {name}

@@ -41,8 +41,8 @@ const Menu = ({ history }) => (
             </Link>
           </li>
           <li className="nav-item">
-            <Link style={currentTab(history, "/")} className="nav-link" to="/">
-              Find a Sitter
+            <Link style={currentTab(history, "/service")} className="nav-link" to="/service">
+              Find Pet Sitter
             </Link>
           </li>
           <li className="nav-item">
