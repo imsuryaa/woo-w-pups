@@ -41,7 +41,7 @@ app.use('/api', serviceRoutes)
 // app.use('/api', stripeRoutes)
 
 // PORT
-const port = 8000
+const port = process.env.PORT || 8000
 
 // Starting the server
 app.listen(port, () => {
