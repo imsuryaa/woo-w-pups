@@ -8,7 +8,7 @@ A platform where people can rent a pup and find pet sitters. Still working to ad
 ### To use this project, follow the steps below
 - Clone the repo and type `npm install` in frontend and backend directory to install the required dependecies
 - Create a `.env` file in frontend with following parameters
-  - `REACT_APP_BACKEND=http://localhost:<Port Number>/api/` (Backend Server)
+  - `REACT_APP_BACKEND=http://localhost:<your_port_number>/api/` (Backend Server)
 - Create a `.env` file in backend with following parameters
   - `DATABASE=mongodb://localhost:27017/<your_db_name>`
   - `PORT=<port_number>`
